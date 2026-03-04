@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+#Titulo01 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#Paragrafo01 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#Paragrafo02{
+    text-align: right;
+    text-transform: lowercase;
+}
+
+#Paragrafo03{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#Paragrafo04{
+    text-align: justify;
+    text-indent: 20px;
+}
+
+#Titulo02{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#SubTitulo01{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: italic;
+}
+
+#Paragrafo05{
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#SubTitulo02{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Paragrafo06{
+    font-size: 16px;
+    font-style: italic;
+}
+#ParagrafoEmail{
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+#Cartao{
+    background-color: azure;
+    padding: 20px;
+}
+
+#Paragrafo07{
+    color: blue;
+    text-align: center;
+}
+
+.ParagrafoClass01{
+    color: red;
+    font-style: italic;
+}
+
+.MinhaLista{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+}
+
+.Links{
+    text-decoration: none;
+}
+
+#Primeiroli{
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Lista02{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+
+}
+
+.Lista02:hover{
+    text-transform: uppercase;
+    color: blue;
+}
+
+#Listali01{
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+#Listali02{
+    text-transform: lowercase;
+}
