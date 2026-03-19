@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    background-image: url(/Aula05/Site/imagens/bg-3.jpg);
+    background-image: url(../imagens/bg-3.jpg);
     background-size: cover;
     background-position: center;
     height: 350px;
