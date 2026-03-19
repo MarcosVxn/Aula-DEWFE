@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);  
 }
 
 h1 {
@@ -12,25 +12,23 @@ h1 {
 .Container{
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .Card {
-    width: 300px;
+    width: 250px;
     height: 100%;
     background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .FundoImg {
     border-radius: 2%;
     height: 140px;
-    width: 300px;
+    width: 250px;
 }
 
 .Card h2 {
