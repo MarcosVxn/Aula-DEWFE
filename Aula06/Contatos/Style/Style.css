@@ -9,12 +9,26 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+.direction{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.direction_low{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+}
+
 .Container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -64,7 +78,7 @@ h1 {
     font-weight: bold;
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 100px;
 }
 
 .FundoIcon {
