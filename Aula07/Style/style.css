@@ -1,0 +1,113 @@
+body {
+    background-color: rgba(16, 19, 26);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+nav {
+    background-color:rgba(5, 8, 10);
+    width: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: -10px;
+}
+
+.Links {
+    display: flex;
+    font-size: 12px;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.Links a {
+    text-decoration: none;
+    color: white;
+}
+
+#plan {
+    background-color: rgb(203, 227, 0);
+    padding: 15px;
+    border-radius: 10%;
+}
+h2{
+    text-align: center;
+    font-size: 48px;
+}
+.Plans {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+.Card_plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background-color: rgba(31, 38, 44);
+    width: 300px;
+    border-radius: 2%;
+    padding: 20px;
+}
+.Inf_plan li::marker {
+    color: greenyellow;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+span {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.Divisoria {
+    border: none;
+    height: 2px;
+    background-color: rgb(203, 227, 0);
+    width: 250px;
+    margin-top: -20px;
+}
+
+h3 {
+    padding-right: 125px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#PosPreco {
+    padding-left: 25px;
+}
+
+.Possition {
+    padding-right: 80px;
+}
+.Card_plan a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.FundoPlan{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 5%;
+    margin-top: auto;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color:  rgb(203, 227, 0);
+    width: 230px;
+}
