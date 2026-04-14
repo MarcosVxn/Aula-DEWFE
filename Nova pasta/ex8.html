@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="texto1" type="text">
+    <input id="texto2" type="text">
+
+    <button  onclick="concatenar()">Clique aqui para concatenar</button>
+    <h1 id="resultado"></h1>
+</body>
+<script>
+   
+
+    function concatenar () {
+        const nome = document.getElementById('texto1').value
+        const nome2 = document.getElementById('texto1').value
+
+        resultado = nome + nome2;
+        document.getElementById('resultado').innerHTML = resultado
+    }
+</script>
+</html>
