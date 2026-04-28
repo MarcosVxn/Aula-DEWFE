@@ -58,11 +58,16 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     background-color: rgba(31, 38, 44);
     width: 300px;
+    height: 340px; /* 👈 ajusta até ficar igual ao essencial */
     border-radius: 2%;
     padding: 20px;
+}
+.Inf_plan {
+    max-height: 120px; /* ajusta até bater com o essencial */
+    overflow: hidden;
 }
 .Inf_plan li::marker {
     color: greenyellow;
