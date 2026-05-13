@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Do Sonho</title>
+    <style>
+        body{
+            background-color: #202427;
+            color: #b8b6b5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #lista {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        #lista li {
+            display: flex; 
+            flex-direction: column; 
+            gap: 8px; 
+            padding: 16px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            background-color: #2C3136;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        #lista li:hover{
+            transform: translateY(-6px);
+            background-color: #b8b6b5; 
+        }
+        #lista li.card-internacional {
+            background-color: #3A4148; 
+            border: 2px solid #ffcc00;  
+        }
+        #lista li.card-internacional:hover {
+            transform: translateY(-6px);
+            background-color: #b8b6b5; 
+        }
+
+        .col-nome {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .col-tipo {
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .col-status {
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .btn-deletar {
+            background-color: #684dff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+            margin-top: auto; 
+            align-self: flex-start; 
+        }
+
+        .btn-deletar:hover {
+            transform: translateY(-2px);
+            background-color: #684ff88f;
+        }
+                a{
+            text-decoration: none;
+            text-align: center;
+            background-color: #ffcc00;
+            color: #202427;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+        a:hover{
+            transform: translateY(-2px);
+            background-color: #e6b800;
+         }
+    </style>
+</head>
+<body>
+    <h1>Lista Do Sonho</h1>
+    <ul id="lista"></ul>
+    <p id="cronometro"> Você esta planejando a sua viagem há 0 segundos</p>
+
+    <a href="Atividade01.html">voltar ao cadastro</a>
+    <script>
+        const lista = document.querySelector("#lista");
+        
+        function renderizarLista() {
+            lista.innerHTML = ""; 
+            const dados = JSON.parse(localStorage.getItem("estado")) || [];
+
+            dados.forEach((item, index) => {
+                const li = document.createElement("li");
+                
+                let statusVisita = "Não informado";
+                if (item.Sim === true || item.Sim === "on") {
+                    statusVisita = "Visitado: Sim";
+                } else if (item.Nao === true || item.Nao === "on") {
+                    statusVisita = "Visitado: Não";
+                }
+
+                let tipoDestino = item.internacional ? "Internacional" : "Nacional";
+
+                if (item.internacional === true) {
+                    li.classList.add("card-internacional");
+                }
+
+                li.innerHTML = `
+                    <span class="col-nome">${item.estado} | ${item.pais}</span>
+                    <span class="col-tipo">Destino: ${tipoDestino}</span>
+                    <span class="col-status">${statusVisita}</span>
+                    <button class="btn-deletar" onclick="deletarItem(${index})">Deletar</button>
+                `;
+                
+                lista.appendChild(li);
+            });
+        }
+
+        function deletarItem(index) {
+            let dados = JSON.parse(localStorage.getItem("estado")) || [];
+            dados.splice(index, 1);
+            localStorage.setItem("estado", JSON.stringify(dados));
+            renderizarLista();
+        }
+
+        renderizarLista();
+
+        let segundos = 0;
+        const cronometro = document.getElementById('cronometro');
+
+        setInterval(function () {
+            segundos++;
+            cronometro.innerText = `Você está planejando suas férias há ${segundos} segundos`;
+        }, 1000);
+    </script>
+</body>
+</html>
