@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Visitantes Registro</h1>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        const lista = document.querySelector("#lista");
+        const dados = JSON.parse(localStorage.getItem("visitante")) || [];
+
+        dados.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.innerText = `${index + 1}. ${item.nome} | ${item.email} | ${item.tel}`;
+            lista.appendChild(li);
+        });
+    </script>
+</body>
+</html>

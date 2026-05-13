@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 07 JS</title>
+</head>
+<body>
+    <input id="campoTexto1" type="text">
+    <input id="campoTexto2" type="text">
+    <p id="paragrafo"></p>
+    <button onclick="evento()">Clique</button>
+
+    <script>
+        function evento(){
+    let text1 = document.getElementById('campoTexto1').value;
+    let text2 = document.getElementById('campoTexto2').value;
+
+    document.getElementById('paragrafo').innerHTML = "" + text1 + " " + text2 ;
+}
+    </script>
+</body>
+</html>

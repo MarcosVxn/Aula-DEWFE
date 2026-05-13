@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Visitante</title>
+</head>
+<body>
+    <form id="cadastroForm">
+        <label>Nome: <input type="text" name="nome" required></label>
+        <label> Email: <input type="text" name="email" required></label>
+        <label>Tel: <input type="text" name="tel" required></label>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        // Aqui pega o id e nesse id estamos pegando o formulario
+        const form = document.querySelector("#cadastroForm");
+        form.addEventListener("submit", function (e){
+            // isso impede o comportamento padrão de atualizar a pagina e enviar os dados
+            e.preventDefault();
+
+            const visitante = {
+                // o value pega os dados digitados
+                nome: form.nome.value,
+                email: form.email.value,
+                tel: form.tel.value
+            };
+            // recupera os dados existente do localstorage
+            let lista = JSON.parse(localStorage.getItem("visitante")) || [];
+
+            // Adiciona novo visitante
+            lista.push(visitante);
+            
+            // salva de volta no localStorage
+            localStorage.setItem("visitante", JSON.stringify(lista));
+
+            // redirecionar na pagina de confirmação
+            window.location.href = "form2.html";
+        }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 06 JS</title>
+</head>
+
+<body>
+    <p>Clique para ver a hora</p>
+    <p id="hrs"></p>
+    <button onclick="verhrs()">horas</button>
+
+    <script>
+        function verhrs() {
+            const d = new Date();
+            document.body.innerHTML = d.toLocaleTimeString('pt-BR');
+            document.getElementById('hrs').innerHTML = d.toLocaleTimeString('pt-BR');
+        }
+    </script>
+</body>
+
+</html>
